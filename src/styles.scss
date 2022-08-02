@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+body {
+    font-family: Lato;
+    background: rgb(148, 42, 87);
+    color: #ddd;
+  }
+  
+  
+  /* in-flight clone */
+  .gu-mirror {
+    position: fixed !important;
+  
+    opacity: 0.8;
+  
+    pointer-events: none;
+  }
+
+  .gu-unselectable {
+//     -webkit-user-select: none !important;
+//     -moz-user-select: none !important;
+//     -ms-user-select: none !important;
+//     user-select: none !important;
+//   
+}
+  /* added to the source element while its mirror is dragged */
+  .gu-transit {
+    opacity: 0.2;
+    
+  }
+  
