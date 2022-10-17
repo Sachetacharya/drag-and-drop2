@@ -1,9 +1,14 @@
 <div class="flex">
-    <div class="container" dragula="VAMPIRES" [(dragulaModel)]="vamps">
-      <div class="vamp" *ngFor="let vamp of vamps">{{ vamp.name }}</div>
-    </div>
-  
-    <div class="container" dragula="VAMPIRES" [(dragulaModel)]="vamps2">
-      <div class="vamp" *ngFor="let vamp of vamps2">{{ vamp.name }}</div>
+  <div class="container" dragula="VAMPIRES" [(dragulaModel)]="vamps">
+    <div class="vamp" *ngFor="let vamp of vamps">
+      {{ vamp.name }} {{ vamp.age }}
     </div>
   </div>
+
+  <div class="container" dragula="VAMPIRES" [(dragulaModel)]="vamps2">
+    <div class="vamp" *ngFor="let vamp of vamps2">
+      {{ vamp.name }}
+      {{ vamp.age }}
+    </div>
+  </div>
+</div>

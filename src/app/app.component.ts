@@ -4,35 +4,30 @@ import { DragulaService } from 'ng2-dragula';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   // @Input() name: string | undefined;
 
-
   vamps = [
-    { name: "Bad Vamp" },
-    { name: "Petrovitch the Slain" },
-    { name: "Bob of the Everglades" },
-    { name: "The Optimistic Reaper" }
+    { name: 'Bad Vamp' },
+    { name: 'Petrovitch the Slain', age: 52  },
+    { name: 'Bob of the Everglades' },
+    { name: 'The Optimistic Reaper' },
   ];
 
   vamps2 = [
-    { name: "Dracula" },
-    { name: "Kurz" },
-    { name: "Vladislav" },
-    { name: "Deacon" }
+    { name: 'Dracula', age: 72 },
+    { name: 'Kurz' },
+    { name: 'Vladislav' },
+    { name: 'Deacon' },
   ];
 
   constructor(private dragulaService: DragulaService) {
-   
+    this.dragulaService.createGroup('VAMPIRES', {});
 
-    // this.dragulaService.createGroup("VAMPIRES", {
-     
-    // });
-
-    // this.dragulaService.dropModel("VAMPIRES").subscribe(args => {
-    //   console.log(args);
-    // });
+    this.dragulaService.dropModel('VAMPIRES').subscribe((args) => {
+      console.log(args);
+    });
   }
 }
